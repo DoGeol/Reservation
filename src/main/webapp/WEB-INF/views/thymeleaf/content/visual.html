@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/main}"
+>
+
+    <body>
+        <div layout:fragment="content">
+            <div class="section_visual">
+                <div class="group_visual">
+                    <div class="container_visual">
+                        <div class="prev_e" style="display:none;">
+                            <div class="prev_inn">
+                                <a href="#" class="btn_pre_e" title="이전"> <i class="spr_book_event spr_event_pre">이전</i> </a>
+                            </div>
+                        </div>
+                        <div class="nxt_e" style="display:none;">
+                            <div class="nxt_inn">
+                                <a href="#" class="btn_nxt_e" title="다음"> <i class="spr_book_event spr_event_nxt">다음</i> </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="container_visual">
+                                <!-- 슬라이딩기능: 이미지 (type = 'th')를 순차적으로 노출 -->
+                                <ul class="visual_img">
+                                </ul>
+                            </div>
+                            <span class="nxt_fix" style="display:none;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
