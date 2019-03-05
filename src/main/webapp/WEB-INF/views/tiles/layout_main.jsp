@@ -1,13 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: pdg
-  Date: 2019-02-13
-  Time: 10:27
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %><%
+%><%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %><%
+%><!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -33,22 +26,22 @@
     <!-- body 태그 내부의 footer 를 담당하는 부분이다. -->
     <tiles:insertAttribute name="footer" />
 
-
-
-<script type="rv-template" id="itemList">
-    <li class="item">
-        <a href="detail.html?id=${id}" class="item_book">
-            <div class="item_preview">
-                <img alt="${description}" class="img_thumb" src="http://211.249.62.123/productImages/${id}?type=th">
-                <span class="img_border"></span>
-            </div>
-            <div class="event_txt">
-                <h4 class="event_txt_tit"> <span>${description}</span> <small class="sm">${placeName}</small> </h4>
-                <p class="event_txt_dsc">${content}</p>
-            </div>
-        </a>
-    </li>
-</script>
+    <script type="rv-template" id="itemList">
+        <li class="item">
+            <a href="detail.html?id=" class="item_book">
+                <div class="item_preview">
+                    <img alt="{title}" class="img_thumb" src="http://localhost:8080/resources/img/{img_file_name}">
+                    <span class="img_border"></span>
+                </div>
+                <div class="event_txt">
+                    <h4 class="event_txt_tit"> <span>{title}</span> <small class="sm">{address}</small> </h4>
+                    <p class="event_txt_dsc">{content}</p>
+                </div>
+            </a>
+        </li>
+    </script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="/resources/js/main/main.js"></script>
 </body>
 
 </html>

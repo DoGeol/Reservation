@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
 <footer>
     <div class="gototop">
         <a href="#" class="lnk_top"> <span class="lnk_top_text">TOP</span> </a>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace ="event">
+    <select id="getInfoAll" resultType="EventItemDTO">
+        SELECT p.description  'title',
+               di.place_name  'address',
+               fi.file_name   'img_file_name',
+               p.content      'content'
+        FROM category cate
+          JOIN product p        on cate.id = p.category_id
+          JOIN product_image pi on p.id = pi.product_id
+          JOIN file_info fi     on pi.file_id = fi.id
+          JOIN display_info di  on p.id = di.product_id
+        WHERE pi.type = 'th'
+    </select>
+    <select id="getInfoCategory" parameterType="int" resultType="EventItemDTO">
+        SELECT p.description  'title',
+               di.place_name  'address',
+               fi.file_name   'img_file_name',
+               p.content      'content'
+        FROM category cate
+          JOIN product p        on cate.id = p.category_id
+          JOIN product_image pi on p.id = pi.product_id
+          JOIN file_info fi     on pi.file_id = fi.id
+          JOIN display_info di  on p.id = di.product_id
+        WHERE pi.type = 'th' AND cate.id = #{id}
+    </select>
+</mapper>
+

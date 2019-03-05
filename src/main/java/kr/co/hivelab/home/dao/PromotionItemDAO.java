@@ -14,7 +14,7 @@ public class PromotionItemDAO {
     SqlSession session;
 
     public List<PromotionItemDTO> getPromotionItemInfo(){
-        return session.selectList("Promotion.getInfo");
+        return session.selectList("promotion.getInfo");
     }
 
 }

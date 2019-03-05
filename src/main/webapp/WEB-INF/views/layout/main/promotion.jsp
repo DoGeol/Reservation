@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div>
-                    <div class="container_visual">
+                    <div class="container_visual_carousel">
                         <!-- 슬라이딩기능: 이미지 (type = 'th')를 순차적으로 노출 -->
                         <ul class="visual_img">
                             <c:forEach items="${promoItem}" var="promoItem">
@@ -34,7 +34,7 @@
                                             <p class="event_txt_adr">${promoItem.address}</p>
                                             <p class="event_txt_dsc">${promoItem.event}</p>
                                         </div>
-                                    </a>
+                                     </a>
                                 </li>
                             </c:forEach>
                         </ul>
@@ -44,16 +44,5 @@
             </div>
         </div>
     </div>
-    <script type="rv-template" id="promotionItem">
-        <li class="item" style="background-image: url(http://211.249.62.123/productImages/${productId}/${productImageId});">
-            <a href="#"> <span class="img_btm_border"></span> <span class="img_right_border"></span> <span class="img_bg_gra"></span>
-                <div class="event_txt">
-                    <h4 class="event_txt_tit"></h4>
-                    <p class="event_txt_adr"></p>
-                    <p class="event_txt_dsc"></p>
-                </div>
-            </a>
-        </li>
-    </script>
 </body>
 </html>
