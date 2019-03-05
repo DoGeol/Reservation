@@ -139,7 +139,8 @@
                     for (var i=0, iMax=data.length; i<iMax; i++){
                         var resultHtml = '';
 
-                        resultHtml += htmlTemplate.replace("{title}", data[i].title)
+                        resultHtml += htmlTemplate.replace("{id}", data[i].id)
+                            .replace("{title}", data[i].title)
                             .replace("{title}", data[i].title)
                             .replace("{content}", data[i].content)
                             .replace("{address}", data[i].address)

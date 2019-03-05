@@ -39,4 +39,13 @@ public class HomeController {
         List<EventItemDTO> eList = event.getEventItem(Integer.parseInt(id));
         return eList;
     }
+
+    // detail
+    @RequestMapping("/detail")
+    public ModelAndView getDetail(@RequestParam("id") String id) {
+        ModelAndView mav = new ModelAndView();
+        System.out.println("TEST : " + id);
+        mav.setViewName("detail_default");
+        return mav;
+    }
 }

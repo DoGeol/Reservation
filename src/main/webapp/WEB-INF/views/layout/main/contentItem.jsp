@@ -48,7 +48,7 @@
                 <c:forEach items="${eventItem}" var="eventItem" varStatus="status">
                     <c:if test="${status.index % 2 == 0}">
                     <li class="item">
-                        <a href="detail.html?id=" class="item_book">
+                        <a href="detail?id=${eventItem.id}" class="item_book">
                             <div class="item_preview">
                                 <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/img/${eventItem.img_file_name}">
                                 <span class="img_border"></span>
@@ -66,7 +66,7 @@
                 <c:forEach items="${eventItem}" var="eventItem" varStatus="status">
                     <c:if test="${status.index % 2 == 1}">
                     <li class="item">
-                        <a href="detail.html?id=" class="item_book">
+                        <a href="detail?id=${eventItem.id}" class="item_book">
                             <div class="item_preview">
                                 <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/img/${eventItem.img_file_name}">
                                 <span class="img_border"></span>

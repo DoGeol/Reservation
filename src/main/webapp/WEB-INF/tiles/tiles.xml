@@ -13,5 +13,12 @@
         <put-attribute name="content_item" value="/WEB-INF/views/layout/main/contentItem.jsp" />
     </definition>
 
+    <definition name="detail_default" template="/WEB-INF/views/tiles/detail_main.jsp">
+        <put-attribute name="header-fade" value="/WEB-INF/views/commons/detail/header-fade.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/commons/footer.jsp"/>
+    </definition>
+
+    <definition name="detail" template="detail_default">
+    </definition>
 
 </tiles-definitions>

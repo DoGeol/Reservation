@@ -3,7 +3,8 @@
 
 <mapper namespace ="event">
     <select id="getInfoAll" resultType="EventItemDTO">
-        SELECT p.description  'title',
+        SELECT di.id 'id',
+               p.description  'title',
                di.place_name  'address',
                fi.file_name   'img_file_name',
                p.content      'content'
@@ -15,7 +16,8 @@
         WHERE pi.type = 'th'
     </select>
     <select id="getInfoCategory" parameterType="int" resultType="EventItemDTO">
-        SELECT p.description  'title',
+        SELECT di.id 'id',
+               p.description  'title',
                di.place_name  'address',
                fi.file_name   'img_file_name',
                p.content      'content'
@@ -27,4 +29,3 @@
         WHERE pi.type = 'th' AND cate.id = #{id}
     </select>
 </mapper>
-

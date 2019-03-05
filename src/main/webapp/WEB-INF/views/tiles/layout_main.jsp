@@ -28,7 +28,7 @@
 
     <script type="rv-template" id="itemList">
         <li class="item">
-            <a href="detail.html?id=" class="item_book">
+            <a href="detail?id={id}" class="item_book">
                 <div class="item_preview">
                     <img alt="{title}" class="img_thumb" src="http://localhost:8080/resources/img/{img_file_name}">
                     <span class="img_border"></span>

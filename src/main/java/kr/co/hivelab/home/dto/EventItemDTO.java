@@ -1,10 +1,19 @@
 package kr.co.hivelab.home.dto;
 
 public class EventItemDTO {
+    private String id;
     private String img_file_name;
     private String title;
     private String address;
     private String content;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId( String id ) {
+        this.id = id;
+    }
 
     public String getImg_file_name() {
         return img_file_name;
@@ -37,6 +46,7 @@ public class EventItemDTO {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     @Override
     public String toString() {
