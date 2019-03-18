@@ -27,7 +27,7 @@
                         <!-- 슬라이딩기능: 이미지 (type = 'th')를 순차적으로 노출 -->
                         <ul class="visual_img">
                             <c:forEach items="${promoItem}" var="promoItem">
-                                <li class="item" style="background-image: url(http://localhost:8080/resources/img/${promoItem.img_file_name});">
+                                <li class="item" style="background-image: url(http://localhost:8080/resources/etc/img/${promoItem.img_file_name});">
                                     <a href="#"> <span class="img_btm_border"></span> <span class="img_right_border"></span> <span class="img_bg_gra"></span>
                                         <div class="event_txt">
                                             <h4 class="event_txt_tit">${promoItem.title}</h4>

@@ -50,7 +50,7 @@
                     <li class="item">
                         <a href="detail?id=${eventItem.id}" class="item_book">
                             <div class="item_preview">
-                                <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/img/${eventItem.img_file_name}">
+                                <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/etc/img/${eventItem.img_file_name}">
                                 <span class="img_border"></span>
                             </div>
                             <div class="event_txt">
@@ -68,7 +68,7 @@
                     <li class="item">
                         <a href="detail?id=${eventItem.id}" class="item_book">
                             <div class="item_preview">
-                                <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/img/${eventItem.img_file_name}">
+                                <img alt="${eventItem.title}" class="img_thumb" src="http://localhost:8080/resources/etc/img/${eventItem.img_file_name}">
                                 <span class="img_border"></span>
                             </div>
                             <div class="event_txt">
