@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace ="detail">
+    <select id="getBannerInfo" parameterType="int" resultType="java.util.Map">
+        SELECT p.description title, p.content description
+        FROM display_info di
+           JOIN product p on di.product_id = p.id
+        WHERE di.id = #{id};
+    </select>
+    <select id="getBannerImage" parameterType="int" resultType="String">
+        SELECT save_file_name img_file_name
+        FROM display_info di
+          JOIN product p on di.product_id = p.id
+          JOIN product_image pi on p.id = pi.product_id
+          JOIN file_info fi on pi.file_id = fi.id
+        WHERE di.id = #{id} AND pi.type != 'th';
+    </select>
+</mapper>

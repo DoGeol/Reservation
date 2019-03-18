@@ -1,8 +1,8 @@
 package kr.co.hivelab.home.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import kr.co.hivelab.home.dto.EventItemDTO;
 import kr.co.hivelab.home.dto.PromotionItemDTO;
+import kr.co.hivelab.home.service.DetailServiceImpl;
 import kr.co.hivelab.home.service.EventItemServiceImpl;
 import kr.co.hivelab.home.service.PromotionBannerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class HomeController {
@@ -22,6 +20,9 @@ public class HomeController {
 
     @Autowired
     EventItemServiceImpl event;
+
+    @Autowired
+    DetailServiceImpl detail;
 
     @RequestMapping("/")
     public ModelAndView getMainPage() {
@@ -45,6 +46,8 @@ public class HomeController {
     public ModelAndView getDetail(@RequestParam("id") String id) {
         ModelAndView mav = new ModelAndView();
         System.out.println("TEST : " + id);
+
+
         mav.setViewName("detail_default");
         return mav;
     }
