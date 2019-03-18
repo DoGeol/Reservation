@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--DataSource 설정-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/reservation?characterEncoding=utf8&amp;serverTimezone=UTC&amp;useSSL=false"/>
+        <property name="username" value="hivelab"/>
+        <property name="password" value="hivelab"/>
+    </bean>
+
+    <!--SqlSessionFactory 설정 : dataSource를 참조, mybatis-config.xml 경로설정-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:/mappers/*.xml" />
+    </bean>
+
+    <bean id ="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+        <constructor-arg ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+
+    <bean id="promotionItemDAO" class="kr.co.hivelab.home.dao.PromotionItemDAO"/>
+    <bean id="eventItemDAO" class="kr.co.hivelab.home.dao.EventItemDAO"/>
+
+</beans>
